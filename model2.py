@@ -66,7 +66,7 @@ with col2:
     if None not in data and st.button('Predict Price'):
         features = [airline_dict[airline], source_city_dict[source_city], departure_time_dict[departure_time], stops_dict[stops], arrival_time_dict[arrival_time], destination_city_dict[destination_city], Class_dict[Class], Date_diff]
 
-        model = pickle.load(open('linear_model.pkl', 'rb'))
+        model = pickle.load(open('linear_model2.pkl', 'rb'))
         predict = model.predict([features])[0]
         st.subheader(f':violet[Flight Price is Rs.  {predict.round(2)}]')
 
